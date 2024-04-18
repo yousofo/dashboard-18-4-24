@@ -5,7 +5,7 @@ import OrderList from "../../components/Orders/OrderList";
 import DetailsList from "../../components/Details-Info/DetailsList";
 import ComponentWrapper from "../../components/Theme-Wrapper/ComponentWrapper";
 import PolarAreaChart from "../../components/Charts/PolarAreaChart";
-import Logs from "../../components/logs/Logs";
+import Logs from "../../components/Logs/Logs";
 import Tickets from "../../components/Tickets/Tickets";
 
 const Home = () => {
