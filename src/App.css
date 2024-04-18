@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*
+    darkMode: state => {
+      state.value = {
+        homeBG: "#1d1a1d",
+        themeColor: "#7e4877",
+        defaultTextColor: "#8f8f8f",
+        componentBG: "#242224",
+        borderColor: "#424242",
+      }
+    },
+    lightMode: state => {
+      state.value = {
+        homeBG: "#f8f8f8",
+        themeColor: "#7e4877",
+        defaultTextColor: "#3a3a3a",
+        componentBG: "#fff",
+        borderColor: "#424242",
+*/
+nav {
+  a.active,
+  a:hover {
+    color: #7e4877 !important;
+  }
+}
+.custom-scrollbar {
+  &::-webkit-scrollbar {
+    background-color: #1d1a1d;
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 02px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 02px;
+  }
+}
+.custom-sb-1 {
+  &::-webkit-scrollbar-track {
+    background-color: #1d1a1d;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #7e4877;
+  }
+}
+.custom-sb-2 {
+  &::-webkit-scrollbar-track {
+    background-color: #f8f8f8;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #7e4877;
+  }
+}
+
+.toggle-btn {
+  div {
+    transition: all 0.3s;
+  }
+}
+
+.toggle-btn-active {
+  div {
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+  }
+}
