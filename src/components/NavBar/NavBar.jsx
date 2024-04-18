@@ -18,7 +18,7 @@ const NavBar = ({ items }) => {
         width: `${barStatus ? "0" : "120px"}`,
         transition: "0.3s",
       }}
-      className={`fixed max-w-fit overflow-hidden sm:sticky sm:-translate-x-0 h-[calc(100vh-72px)] top-[72px] sm:h-[calc(100vh-104px)] sm:top-[104px] w-fit flex z-10 flex-col font-semibold`}
+      className={`fixed shadow-2xl drop-shadow-2xl max-w-fit overflow-hidden sm:sticky sm:-translate-x-0 h-[calc(100vh-72px)] top-[72px] sm:h-[calc(100vh-104px)] sm:top-[104px] w-fit flex z-10 flex-col font-semibold`}
     >
       <ul className="flex flex-col items-center w-max p-2 sm:p-4  overflow-hidden">
         {items?.map((e, i) => (
