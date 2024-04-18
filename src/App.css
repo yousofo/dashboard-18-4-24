@@ -23,8 +23,8 @@
         borderColor: "#424242",
 */
 nav {
-  a.active,
-  a:hover {
+  & a.active,
+  & a:hover {
     color: #7e4877 !important;
   }
 }
