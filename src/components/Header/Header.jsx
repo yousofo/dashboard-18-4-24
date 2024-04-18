@@ -4,6 +4,7 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTheme } from "../../app/themeSlice";
 import ToggleBtn from "../buttons/ToggleBtn";
+import { switchStatus } from "../../app/statusSlice";
 /*
   homeBG: "#1d1a1d",
   themeColor: "#7e4877",
@@ -14,6 +15,7 @@ const Header = () => {
   const theme = useSelector(selectTheme);
   const dispatch = useDispatch();
   console.log("header rendered");
+
   const style1 = {
     backgroundColor: theme.componentBG,
     color: theme.defaultTextColor,
@@ -28,7 +30,10 @@ const Header = () => {
       className={`flex sticky top-0 z-50 items-center p-4 gap-2 sm:p-8 text-sm justify-between shadow`}
     >
       <div className="interact flex items-center gap-2">
-        <AiOutlineBars className="text-2xl ms-3 me-4 sm:me-9" />
+        <AiOutlineBars
+          onClick={() => dispatch(switchStatus())}
+          className="text-2xl cursor-pointer sm:me-9"
+        />
         <div
           style={style2}
           className="header-search-input flex items-center py-2 px-4 rounded-2xl"
@@ -68,7 +73,7 @@ const Header = () => {
         </div>
         <h2 className="text-white font-bold text-2xl">DEMO</h2>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 sm:gap-4">
         <ToggleBtn />
         <div className="flex items-center gap-2 text-sm">
           <img
@@ -76,7 +81,7 @@ const Header = () => {
             className="w-10 rounded-full "
             alt=""
           />
-          <p className="text-gray-300">Youssef Nabil</p>
+          <p className="text-gray-300 w-min sm:w-fit">Youssef Nabil</p>
         </div>
       </div>
     </header>

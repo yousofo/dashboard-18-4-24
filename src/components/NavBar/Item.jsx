@@ -12,7 +12,7 @@ const Item = ({ link, title, Icon }) => {
         className="flex flex-col items-center justify-center gap-1.5"
       >
         {<Icon className={`text-2xl sm:text-4xl`} />}
-        <p className="capitalize hidden sm:block text-xs sm:text-sm text-center">{title}</p>
+        <p className="capitalize text-xs sm:text-sm text-center">{title}</p>
       </NavLink>
       <span style={{backgroundColor:`${theme.borderColor}`,height:"1px"}} className="absolute block w-48 bottom-0 -left-10"></span>
     </li>
