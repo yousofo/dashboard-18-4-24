@@ -15,7 +15,7 @@ const Home = () => {
   console.log(navBarStatus)
   return (
     <div
-      className={`${!navBarStatus?"nav-active":""} p-3 home sm:py-8 sm:px-10 mx-auto xl:!max-w-full w-full flex-1 flex flex-col gap-8`}
+      className={`${navBarStatus&&"nav-active"} p-3 home sm:py-8 sm:px-10 mx-auto xl:!max-w-full w-full flex-1 flex flex-col gap-8`}
     >
       <TitleInfo title="Home" />
       <section className="w-full flex gap-3 sm:gap-6 flex-col xl:flex-row">

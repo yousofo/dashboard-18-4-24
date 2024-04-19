@@ -47,7 +47,7 @@ const Header = () => {
           />
           <FaMagnifyingGlass />
         </div>
-        <div className="header-language-select rounded-2xl overflow-hidden hidden sm:block">
+        <div className="header-language-select rounded-2xl overflow-hidden hidden md:block">
           <select
             style={style2}
             className="py-2 px-4 bg-transparent focus:outline-none cursor-pointer"

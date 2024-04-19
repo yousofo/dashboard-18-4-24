@@ -70,9 +70,28 @@ nav {
   }
 }
 
-.home.nav-active {
-  /* style={{maxWidth:`${!navBarStatus?"calc(100% - 120px)":"100%"}`}}, */
-  @media (min-width: 650px) {
+@media (max-width: 639px) {
+  .home {
+    max-width: calc(100%);
+  }
+  nav {
+    width: 91px;
+    min-width: 91px;
+    max-width: 91px;
+  }
+  nav.active {
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+  }
+}
+@media (min-width: 640px) {
+  .home.nav-active {
     max-width: calc(100% - 120px);
+  }
+  nav.active {
+    width: 120px !important;
+    min-width: 120px !important;
+    max-width: 120px !important;
   }
 }

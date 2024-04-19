@@ -7,19 +7,20 @@ import { selectStatus } from "../../app/statusSlice";
 const NavBar = ({ items }) => {
   const theme = useSelector(selectTheme);
   const barStatus = useSelector(selectStatus);
-  // const [active, setActive] = useState(false);
 
    console.log("navbar rendered");
   return (
     <nav
       style={{
         backgroundColor: theme.componentBG,
-        width: `${barStatus ? "0" : "120px"}`,
-        minWidth: `${barStatus ? "0" : "120px"}`,
-        maxWidth: `${barStatus ? "0" : "120px"}`,
+        // width: `${!barStatus ? "0" : "120px"}`,
+        // minWidth: `${!barStatus ? "0" : "120px"}`,
+        // maxWidth: `${!barStatus ? "0" : "120px"}`,
         transition: "0.3s",
       }}
-      className={`fixed shadow-2xl flex-1 w-0 drop-shadow-2xl max-w-fit overflow-hidden sm:sticky h-[calc(100vh-72px)] top-[72px] sm:h-[calc(100vh-104px)] sm:top-[104px] flex z-10 flex-col font-semibold`}
+      className={`fixed ${barStatus && "active"} shadow-2xl flex-1 drop-shadow-2xl 
+       overflow-hidden sm:sticky 
+      h-[calc(100vh-72px)] top-[72px] sm:h-[calc(100vh-104px)] sm:top-[104px] flex z-10 flex-col font-semibold`}
     >
       <ul className="flex flex-col items-center w-max p-2 sm:p-4  overflow-hidden">
         {items?.map((e, i) => (
