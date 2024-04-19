@@ -4,7 +4,7 @@ export const statusSlice = createSlice({
   name: "status",
   initialState: {
     value: {
-      navBar: false,
+      navBar: true,
     }
   },
   reducers: {

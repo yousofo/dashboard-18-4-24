@@ -31,7 +31,7 @@ export default function PolarAreaChart() {
 
   useEffect(() => {
     let myListener2 = window.addEventListener("resize", () => {
-      charRef.current?.resize(1000, 1000);
+      charRef.current?.resize(10000, 10000);
     });
     return () => {
       removeEventListener("resize", myListener2);

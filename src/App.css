@@ -69,3 +69,10 @@ nav {
     transform: translateX(-100%);
   }
 }
+
+.home.nav-active {
+  /* style={{maxWidth:`${!navBarStatus?"calc(100% - 120px)":"100%"}`}}, */
+  @media (min-width: 650px) {
+    max-width: calc(100% - 120px);
+  }
+}
