@@ -16,7 +16,7 @@ const NavBar = ({ items }) => {
         // width: `${!barStatus ? "0" : "120px"}`,
         // minWidth: `${!barStatus ? "0" : "120px"}`,
         // maxWidth: `${!barStatus ? "0" : "120px"}`,
-        transition: "0.3s",
+        // transition: "width 0.3s",
       }}
       className={`fixed w-0 ${barStatus && "active"} shadow-2xl flex-1 drop-shadow-2xl 
        overflow-hidden sm:sticky 
