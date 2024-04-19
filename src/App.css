@@ -5,6 +5,9 @@
   box-sizing: border-box;
   transition: .3s;
 }
+.app{
+  min-height: 100dvh;
+}
 /*
     darkMode: state => {
       state.value = {

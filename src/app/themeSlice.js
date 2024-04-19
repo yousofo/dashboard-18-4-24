@@ -4,6 +4,7 @@ export const themeSlice = createSlice({
   name: 'theme',
   initialState: {
     value: {
+      type: "dark",
       homeBG: "#1d1a1d",
       themeColor: "#7e4877",
       borderColor: "#424242",
@@ -14,6 +15,7 @@ export const themeSlice = createSlice({
   reducers: {
     darkMode: state => {
       state.value = {
+        type: "dark",
         homeBG: "#1d1a1d",
         themeColor: "#7e4877",
         defaultTextColor: "#8f8f8f",
@@ -23,6 +25,7 @@ export const themeSlice = createSlice({
     },
     lightMode: state => {
       state.value = {
+        type: "light",
         homeBG: "#f8f8f8",
         themeColor: "#7e4877",
         defaultTextColor: "#3a3a3a",

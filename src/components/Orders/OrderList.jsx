@@ -1,5 +1,7 @@
 import React from "react";
 import Order from "./Order";
+import { useSelector } from "react-redux";
+import { selectTheme } from "../../app/themeSlice";
 
 const ordersData = [
   {
@@ -53,6 +55,7 @@ const ordersData = [
 ];
 
 const OrderList = () => {
+  const theme = useSelector(selectTheme)
   return (
     <ul className="flex gap-4 flex-col flex-1 overflow-y-auto absolute w-full h-full custom-scrollbar custom-sb-1">
       {ordersData.map((e, i) => (
