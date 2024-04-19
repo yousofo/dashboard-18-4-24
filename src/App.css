@@ -89,6 +89,11 @@ nav {
   .home.nav-active {
     max-width: calc(100% - 120px);
   }
+  nav{
+    width: 0px !important;
+    min-width: 0px !important;
+    max-width: 0px !important;
+  }
   nav.active {
     width: 120px !important;
     min-width: 120px !important;
