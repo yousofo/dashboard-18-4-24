@@ -25,7 +25,7 @@ const HomeLayout = ({ children }) => {
     <>
       <Header />
       <main
-        className="flex"
+        className="flex flex-1"
         style={{ backgroundColor: theme.homeBG, color: theme.defaultTextColor }}
       >
         <NavBar items={items} />

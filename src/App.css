@@ -3,10 +3,12 @@
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  transition: .3s;
+  transition: 0.3s;
 }
-.app{
+.app {
   min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
 /*
     darkMode: state => {
@@ -93,7 +95,7 @@ nav {
   .home.nav-active {
     max-width: calc(100% - 120px);
   }
-  nav{
+  nav {
     width: 0px !important;
     min-width: 0px !important;
     max-width: 0px !important;
