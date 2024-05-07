@@ -1,15 +1,10 @@
-import React from 'react'
-import TitleInfo from '../../components/Title-Info/TitleInfo'
+import React from "react";
+import PageWrapper from "../PageWrapper.jsx";
 
 const CryptoWallet = () => {
-  return (
-    <div className="py-8 px-10 flex-1">
-      <TitleInfo title="Crypto Wallet"/>
-      <section>
+  return <PageWrapper title="Crypto Wallet">
+    
+  </PageWrapper>;
+};
 
-      </section>
-    </div>
-  )
-}
-
-export default CryptoWallet
+export default CryptoWallet;

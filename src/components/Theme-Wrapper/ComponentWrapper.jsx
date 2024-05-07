@@ -6,7 +6,7 @@ const ComponentWrapper = ({ title, children }) => {
   const theme = useSelector(selectTheme);
   return (
     <div
-      className="w-full p-3 sm:p-6 rounded flex-1 h-full flex flex-col justify-between relative theme-component"
+      className="w-full transition-all p-3 sm:p-6 rounded flex-1 h-full flex flex-col justify-between relative theme-component"
       style={{ backgroundColor: theme.componentBG }}
     >
       {title && <h3 className="capitalize  mb-4 text-lg">{title}</h3>}

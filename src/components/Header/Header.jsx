@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header
       style={style1}
-      className={`flex sticky top-0 z-50 items-center p-4 gap-2 sm:p-8 text-sm justify-between shadow`}
+      className={`flex transition-all sticky top-0 z-50 items-center p-4 gap-2 sm:p-8 text-sm justify-between shadow`}
     >
       <div className="interact flex items-center gap-2">
         <AiOutlineBars
@@ -36,10 +36,10 @@ const Header = () => {
         />
         <div
           style={style2}
-          className="header-search-input flex items-center py-2 px-4 rounded-2xl"
+          className="header-search-input flex transition-all items-center py-2 px-4  rounded-2xl"
         >
           <input
-            className="bg-transparent w-[100px] sm:w-[160px]"
+            className="bg-transparent w-[100px] sm:w-[160px] focus:outline-none"
             type="search"
             placeholder="Search"
             name=""
@@ -47,10 +47,10 @@ const Header = () => {
           />
           <FaMagnifyingGlass />
         </div>
-        <div className="header-language-select rounded-2xl overflow-hidden hidden md:block">
+        <div style={style2} className="header-language-select  rounded-2xl overflow-hidden hidden md:block">
           <select
-            style={style2}
-            className="py-2 px-4 bg-transparent focus:outline-none cursor-pointer"
+            
+            className="py-2 transition-all px-3 me-1  bg-transparent focus:outline-none cursor-pointer"
           >
             <option value="english">English</option>
             <option value="arabic">Arabic</option>
@@ -71,7 +71,7 @@ const Header = () => {
         <div className="rounded-full h-full w-14 overflow-hidden">
           <img className="h-full" src="/media/bugsbunny.png" alt="" />
         </div>
-        <h2 className="text-white font-bold text-2xl">DEMO</h2>
+        <h2 style={{color:theme.defaultTextColor}} className="font-bold text-2xl">DEMO</h2>
       </div>
       <div className="flex items-center gap-2 sm:gap-4">
         <ToggleBtn />

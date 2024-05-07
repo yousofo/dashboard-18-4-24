@@ -18,7 +18,7 @@ const NavBar = ({ items }) => {
         // maxWidth: `${!barStatus ? "0" : "120px"}`,
         // transition: "width 0.3s",
       }}
-      className={`fixed w-0 ${barStatus && "active"} shadow-2xl flex-1 drop-shadow-2xl 
+      className={`fixed w-0 ${barStatus && "active"} shadow-lg flex-1 transition-all 
        overflow-hidden sm:sticky 
       h-[calc(100vh-72px)] top-[72px] sm:h-[calc(100vh-104px)] sm:top-[104px] flex z-10 flex-col font-semibold`}
     >

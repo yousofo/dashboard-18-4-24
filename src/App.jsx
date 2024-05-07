@@ -5,6 +5,7 @@ import store from './app/store'
 import Layout from "./components/Layout";
 import Home from "./pages/Home/Home";
 import CryptoWallet from "./pages/Crypto-Wallet/CryptoWallet";
+import GeminiAI from "./pages/GeminiAI/GeminiAI";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/Crypto-Wallet" element={<CryptoWallet/>}/>
+              <Route path="/GeminiAI" element={<GeminiAI/>}/>
             </Routes>
           </Layout>
         </div>
