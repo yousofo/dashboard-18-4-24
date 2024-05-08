@@ -1,26 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
 import PageWrapper from "../PageWrapper.jsx";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import AIMessage from "./AIMessage.jsx";
 import { FaMicrophone } from "react-icons/fa";
 import { LuImagePlus } from "react-icons/lu";
 import { IoSend } from "react-icons/io5";
 
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../app/themeSlice.js";
-import UserMessage from "./UserMessage.jsx";
+import Message from "./Message.jsx";
 
 const GeminiAI = () => {
   const API_KEY = "AIzaSyBtIjthkp5NRoyzPjA7FeRLexhKc7E6SCI";
-  const inputRef = useRef();
+  let inputRef = useRef();
+  let messageRef = useRef();
+  console.log(messageRef.current);
   const [genAI, setGenAI] = useState(new GoogleGenerativeAI(API_KEY));
   const [inputValue, setInputValue] = useState("");
   const [messages, setMessages] = useState([]);
   const [showSend, setShowSend] = useState(false);
   const theme = useSelector(selectTheme);
   // const genAI = new GoogleGenerativeAI(process.env.API_KEY);
-  console.log("gemini rendered");
-  console.log(messages);
+
   async function run(prompt) {
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
     const result = await model.generateContent(prompt);
@@ -49,22 +49,32 @@ const GeminiAI = () => {
       setShowSend(false);
     }
   }
+  useEffect(() => {
+    console.log(document.body.scrollHeight);
+    if (messageRef.current) {
+      window.scrollTo({
+        top: messageRef.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  }, [messages.length]);
+
   return (
     <PageWrapper title="Gemini AI">
       <div className="w-full max-w-[810px] h-full gap-4 mx-auto flex  flex-col justify-between relative">
-        {messages.length == 0 ? (
-          <h2 className="text-2xl sm:text-3xl m-auto h-full pt-[25vh] text-center">Hello, How can I help you today?</h2>
-        ) : (
-          <ul className="flex flex-col gap-4 ">
-            {messages.map((e, i) =>
-              e.type == "user" ? (
-                <UserMessage message={e.text} key={i} />
-              ) : (
-                <AIMessage message={e.text} key={i} />
-              )
-            )}
-          </ul>
+        {messages.length == 0 && (
+          <h2 className="text-2xl sm:text-3xl m-auto h-full pt-[25vh] text-center">
+            Hello, How can I help you today?
+          </h2>
         )}
+        <ul className="flex flex-col gap-4 ">
+          {messages.map((e, i) => (
+            <li ref={messageRef} key={i}>
+              <Message type={e.type} message={e.text} />
+            </li>
+          ))}
+        </ul>
+
         <div
           className="sticky bottom-0 py-5 overflow-hidden"
           style={{
